@@ -1,5 +1,7 @@
-h1 {
-  font-size: 50px;
-  margin: 0;
-  font-weight: 400;
+@font-face {
+  font-family: "Exo2";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/Exo2-Thin.ttf") format("truetype");
+  font-display: swap;
 }

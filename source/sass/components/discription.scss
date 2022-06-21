@@ -29,13 +29,13 @@
   margin-bottom: 15px;
 }
 
-.discription__servings, .discription__present {
+.discription__servings, .discription__present, .disdiscription__text {
   color: $gray;
   font-size: 14px;
   line-height: 16px;
   margin: 0;
 }
 
-.discription__servings__amount {
+.discription__servings__amount, .discription__present__amount {
   font-weight: bold;
 }

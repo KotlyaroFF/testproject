@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>TEST project</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -13,59 +13,31 @@
   <section class="catalog">
     <h1 class="catalog__title title">Ты сегодня покормил кота?</h1>
     <ul class="catalog__list">
-      <li class="catalog__item">
-        <div class="catalog__card">
-          <div class="catalog__card__decor"></div>
-          <p class="catalog__card__tagline">Сказочное заморское яство</p>
-          <div class="discription">
-            <h2 class="discription__name">Нямушка</h2>
-            <p class="discription__flavor">с фуа-гра</p>
-            <p class="discription__servings"><span class="discription__servings__amount">10</span> порций</p>
-            <p class="discription__present">мышь в подарок</p>
-            <div class="value">
-              <p class="value__number">0,5</p>
-              <p class="value__measure">кг</p>
-            </div>
-          </div>
-        </div>
-        <p class="downtext">Чего сидишь? Порадуй котэ, <a class="downtext__link" href="#">купи</a></p>
-      </li>
-      <li class="catalog__item">
-        <div class="catalog__card">
-          <div class="catalog__card__decor"></div>
-          <p class="catalog__card__tagline">Сказочное заморское яство</p>
-          <div class="discription">
-            <h2 class="discription__name">Нямушка</h2>
-            <p class="discription__flavor">с фуа-гра</p>
-            <p class="discription__servings"><span class="discription__servings__amount">10</span> порций</p>
-            <p class="discription__present">мышь в подарок</p>
-            <div class="value">
-              <p class="value__number">0,5</p>
-              <p class="value__measure">кг</p>
-            </div>
-          </div>
-        </div>
-        <p class="downtext">Чего сидишь? Порадуй котэ, <a class="downtext__link" href="#">купи</a></p>
-      </li>
-      <li class="catalog__item">
-        <div class="catalog__card">
-          <div class="catalog__card__decor"></div>
-          <p class="catalog__card__tagline">Сказочное заморское яство</p>
-          <div class="discription">
-            <h2 class="discription__name">Нямушка</h2>
-            <p class="discription__flavor">с фуа-гра</p>
-            <p class="discription__servings"><span class="discription__servings__amount">10</span> порций</p>
-            <p class="discription__present">мышь в подарок</p>
-            <div class="value">
-              <p class="value__number">0,5</p>
-              <p class="value__measure">кг</p>
-            </div>
-          </div>
-        </div>
-        <p class="downtext">Чего сидишь? Порадуй котэ, <a class="downtext__link" href="#">купи</a></p>
-      </li>
     </ul>
   </section>
-</body>
 
+  <template id="catalog__card">
+    <li class="catalog__item">
+      <div class="catalog__card">
+        <div class="catalog__card__decor"></div>
+        <p class="catalog__card__tagline">Сказочное заморское яство</p>
+        <div class="discription">
+          <h2 class="discription__name">Нямушка</h2>
+          <p class="discription__flavor">с фуа-гра</p>
+          <p class="discription__servings"><span class="discription__servings__amount">10</span> порций</p>
+          <p class="discription__present"><span class="discription__present__amount"></span><span class="discription_present__text"> мыши в подарок</span></p>
+          <p class="disdiscription__text"></p>
+          <div class="value">
+            <p class="value__number">0,5</p>
+            <p class="value__measure">кг</p>
+          </div>
+        </div>
+      </div>
+      <p class="downtext">Чего сидишь? Порадуй котэ, <a class="downtext__link" href="#">купи</a></p>
+    </li>
+  </template>
+
+  <script src="/js/main.js" type="module"></script>
+
+</body>
 </html>

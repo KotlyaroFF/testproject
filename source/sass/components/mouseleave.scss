@@ -1,0 +1,20 @@
+.catalog__item--mouseleave .discription {
+
+  border: 4px $pinck solid;
+  border-top: none;
+}
+
+.catalog__item--mouseleave .value {
+  border: 1px solid $pinck;
+  background-color: $pinck;
+}
+
+.catalog__item--mouseleave .catalog__card__decor {
+  background: linear-gradient(-45deg,$white,$white 28.5px,$pinck 0,$pinck 32px,transparent 0);
+}
+
+.catalog__item--mouseleave .catalog__card__tagline {
+  border-right: 4px $pinck solid;
+  border-top: 4px $pinck solid;
+  color: $pinck;
+}

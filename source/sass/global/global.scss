@@ -15,7 +15,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    z-index: 10;
+    z-index: 3;
     background: url("../img/Shadow.png");
   }
 }
@@ -29,4 +29,8 @@ ul {
   margin: 0;
   padding: 0;
   text-decoration: none;
+}
+
+.hidden {
+  display: none;
 }

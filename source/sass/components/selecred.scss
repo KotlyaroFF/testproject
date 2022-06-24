@@ -1,0 +1,20 @@
+
+.catalog__item--selected .discription {
+
+  border: 4px $lightRed solid;
+  border-top: none;
+}
+
+.catalog__item--selected .value {
+  border: 1px solid $lightRed;
+  background-color: $lightRed;
+}
+
+.catalog__item--selected .catalog__card__decor {
+  background: linear-gradient(-45deg,$white,$white 28.5px,$lightRed 0,$lightRed 32px,transparent 0);
+}
+
+.catalog__item--selected .catalog__card__tagline {
+  border-right: 4px $lightRed solid;
+  border-top: 4px $lightRed solid;
+}

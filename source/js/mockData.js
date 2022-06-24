@@ -4,7 +4,8 @@ export const data = [{
   servingsAmount: '10',
   presentAmount: '1',
   value: '0,5',
-  available: true
+  available: true,
+  description: 'Печень утки разварная с артишоками.'
 },
 {
   id: 2,
@@ -12,7 +13,8 @@ export const data = [{
   servingsAmount: '40',
   presentAmount: '2',
   value: '2',
-  available: true
+  available: true,
+  description: 'Головы щучьи с чесноком да свежайшая сёмгушка.'
 },
 {
   id: 3,
@@ -20,6 +22,7 @@ export const data = [{
   servingsAmount: '100',
   presentAmount: '5',
   value: '5',
-  available: false
+  available: false,
+  description: 'Филе из цыплят с трюфелями в бульоне.'
 }];
 

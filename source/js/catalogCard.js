@@ -1,4 +1,6 @@
-import {data} from './mockData.js'
+import { data } from './mockData.js'
+import { getDisabledCard } from './disabledCard.js';
+import { getSelectedCard } from './selectedCard.js';
 
 const getCatalogCard = () => {
 
@@ -13,6 +15,9 @@ const getCatalogCard = () => {
     catalogCardItem.querySelector('.discription__flavor').textContent = id.title;
     catalogCardItem.querySelector('.discription__servings__amount').textContent = id.servingsAmount;
     catalogCardItem.querySelector('.value__number').textContent = id.value;
+    const catalogCard = catalogCardItem.querySelector('.catalog__card');
+    const downtextLink = catalogCardItem.querySelector('.downtext__link');
+
 
     if (id.presentAmount > 1) {
       if (id.presentAmount > 4) {
@@ -27,15 +32,21 @@ const getCatalogCard = () => {
     };
 
     if (!id.available) {
-      catalogCardItem.classList.add('catalog__item--disabled');
+      getDisabledCard(catalogCardItem, 'catalog__item');
       catalogCardItem.querySelector('.downtext').textContent = 'Печалька, ' + id.title + ' закончился.'
+    } else {
+      catalogCard.addEventListener('click', () => {
+       getSelectedCard(catalogCardItem, 'catalog__item', catalogCard, id.description);
+           console.log('click');
+      });
+      downtextLink.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        getSelectedCard(catalogCardItem, 'catalog__item', catalogCard, id.description);
+      });
     }
 
     catalogCardList.appendChild(catalogCardItem);
-    console.log(catalogCardList);
-
   });
-
 
 }
 

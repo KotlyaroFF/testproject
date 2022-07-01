@@ -1,36 +1,27 @@
-import { doMouseenter, doMouseleave } from "./mouseListener.js";
-
-const getSelectedCard = (parentClass, className, clickClass, contentText) => {
-  const downtextSpan = document.createElement('span');
 
 
-  if (parentClass.classList.contains(className + '--selected')) {
-      parentClass.classList.remove(className + '--selected');
-      parentClass.querySelector('.downtext__default').classList.remove('hidden');
-      parentClass.querySelector('.downtext__selected').remove(downtextSpan);
+const getSelectedCard = (parentClass, className, clickClass, contentText, mouseEnter, mouseLeave) => {
+const downtextSpan = document.createElement('span');
 
-      clickClass.removeEventListener('mouseenter', () => {
-        doMouseOver(parentClass, className);
-      });
+  if (!parentClass.classList.contains(className + '--selected')) {
+    parentClass.classList.add(className + '--selected');
+    downtextSpan.classList.add('downtext__selected');
+    parentClass.querySelector('.downtext').appendChild(downtextSpan);
+    parentClass.querySelector('.downtext__default').classList.add('hidden');
+    downtextSpan.textContent = contentText;
 
-      clickClass.removeEventListener('mouseleave', () => {
-        doMouseOut(parentClass, className);
-      });
+    clickClass.addEventListener('mouseenter', mouseEnter);
+
+    clickClass.addEventListener('mouseleave', mouseLeave);
 
   } else {
-      parentClass.classList.add(className + '--selected');
-      downtextSpan.classList.add('downtext__selected');
-      parentClass.querySelector('.downtext').appendChild(downtextSpan);
-      parentClass.querySelector('.downtext__default').classList.add('hidden');
-      downtextSpan.textContent = contentText;
+    parentClass.classList.remove(className + '--selected');
+    parentClass.querySelector('.downtext__default').classList.remove('hidden');
+    parentClass.querySelector('.downtext__selected').remove(downtextSpan);
 
-      clickClass.addEventListener('mouseleave', () => {
-        doMouseleave(parentClass, className);
-      });
+    clickClass.removeEventListener('mouseenter', mouseEnter);
 
-      clickClass.addEventListener('mouseenter', () => {
-        doMouseenter(parentClass, className);
-      });
+    clickClass.removeEventListener('mouseleave', mouseLeave);
 
   };
 
